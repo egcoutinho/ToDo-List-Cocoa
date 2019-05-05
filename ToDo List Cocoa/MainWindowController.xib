@@ -7,6 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="ToDo_List_Cocoa" customModuleProvider="target">
             <connections>
+                <outlet property="tasksTableView" destination="Cbh-R7-biz" id="e3g-5P-GzZ"/>
+                <outlet property="textBox" destination="EzI-4c-aWj" id="0FY-gd-adk"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -97,6 +99,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="addTaskButton:" target="-2" id="Dqx-mz-lPN"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

@@ -8,8 +8,27 @@
 
 import Cocoa
 
-class MainWindowController: NSWindowController
+class MainWindowController: NSWindowController, NSTableViewDelegate, NSTableViewDataSource
 {
+    
+    var taskList = TaskList()
+    
+    @IBOutlet weak var textBox: NSTextField!
+    @IBOutlet weak var tasksTableView: NSTableView!
+    
+    
+    
+    
+    
+    @IBAction func addTaskButton(_ sender: NSButton)
+    {
+        let tarefa = textBox.stringValue
+        
+        print("Adicionando tarefa: \(tarefa)")
+        
+        taskList.add(task: tarefa)
+    }
+    
     override var windowNibName: NSNib.Name?
     {
         return "MainWindowController"
