@@ -12,7 +12,6 @@
 		221C66D1227E69E5007DB626 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C66CF227E69E5007DB626 /* MainMenu.xib */; };
 		221C66DB227E6A1A007DB626 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C66D9227E6A1A007DB626 /* MainWindowController.swift */; };
 		221C66DC227E6A1A007DB626 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C66DA227E6A1A007DB626 /* MainWindowController.xib */; };
-		221C66DE227E796C007DB626 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C66DD227E796C007DB626 /* TaskList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		221C66D3227E69E5007DB626 /* ToDo_List_Cocoa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDo_List_Cocoa.entitlements; sourceTree = "<group>"; };
 		221C66D9227E6A1A007DB626 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		221C66DA227E6A1A007DB626 /* MainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
-		221C66DD227E796C007DB626 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 				221C66D2227E69E5007DB626 /* Info.plist */,
 				221C66D3227E69E5007DB626 /* ToDo_List_Cocoa.entitlements */,
 				221C66D9227E6A1A007DB626 /* MainWindowController.swift */,
-				221C66DD227E796C007DB626 /* TaskList.swift */,
 				221C66DA227E6A1A007DB626 /* MainWindowController.xib */,
 			);
 			path = "ToDo List Cocoa";
@@ -140,7 +137,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				221C66DE227E796C007DB626 /* TaskList.swift in Sources */,
 				221C66DB227E6A1A007DB626 /* MainWindowController.swift in Sources */,
 				221C66CC227E69E3007DB626 /* AppDelegate.swift in Sources */,
 			);

@@ -11,7 +11,8 @@ import Cocoa
 class MainWindowController: NSWindowController, NSTableViewDelegate, NSTableViewDataSource
 {
     
-    var taskList = TaskList()
+    
+    var taskList : [String] = []
     
     @IBOutlet weak var textBox: NSTextField!
     @IBOutlet weak var tasksTableView: NSTableView!
@@ -26,7 +27,8 @@ class MainWindowController: NSWindowController, NSTableViewDelegate, NSTableView
         
         print("Adicionando tarefa: \(tarefa)")
         
-        taskList.add(task: tarefa)
+        taskList.append(tarefa)
+        
     }
     
     override var windowNibName: NSNib.Name?
