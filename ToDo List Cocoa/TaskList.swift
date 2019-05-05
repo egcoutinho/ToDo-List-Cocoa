@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct TaskList
+class TaskList
 {
-    var tasks: [String] = []
+    private var tasks: [String] = []
    
    
     
-    mutating func add(task: String)
+    func add(task: String)
     {
         tasks.append(task)
     }
