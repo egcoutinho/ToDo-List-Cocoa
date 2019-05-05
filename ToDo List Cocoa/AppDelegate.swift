@@ -12,10 +12,15 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
+    private var mainWindowController: MainWindowController?
 
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+    func applicationDidFinishLaunching(_ aNotification: Notification)
+    {
+        let window = MainWindowController()
+        window.showWindow(self)
+        
+        mainWindowController = window
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
