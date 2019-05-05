@@ -12,10 +12,10 @@ class MainWindowController: NSWindowController, NSTableViewDelegate, NSTableView
 {
     
     
-    var taskList : [String] = []
+    private var taskList : [String] = ["Huguinho", "Zezinho", "Luizinho"]
     
-    @IBOutlet weak var textBox: NSTextField!
-    @IBOutlet weak var tasksTableView: NSTableView!
+    @IBOutlet private weak var textBox: NSTextField!
+    @IBOutlet private weak var tasksTableView: NSTableView!
     
     
     
@@ -28,8 +28,10 @@ class MainWindowController: NSWindowController, NSTableViewDelegate, NSTableView
         print("Adicionando tarefa: \(tarefa)")
         
         taskList.append(tarefa)
-        
+        updateUI()
     }
+    
+    
     
     override var windowNibName: NSNib.Name?
     {
@@ -41,6 +43,31 @@ class MainWindowController: NSWindowController, NSTableViewDelegate, NSTableView
         super.windowDidLoad()
 
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    }
+    
+    private func updateUI()
+    {
+        print(taskList.count)
+        tasksTableView.reloadData()
+    }
+    
+    //MARK: NSTableViewDataSource
+    func numberOfRows(in tableView: NSTableView) -> Int
+    {
+        return taskList.count
+    }
+    
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any?
+    {
+        return taskList[row]
+    }
+    
+    //MARK: NSTableViewDelegate
+    
+    func tableViewSelectionDidChange(_ notification: Notification)
+    {
+        // TODO: Implementar código para editar tarefa quando for selecionada na Table View
+        print("tableViewSelectionDidChange")
     }
     
 }
